@@ -1,0 +1,260 @@
+:root {
+	--primario: #013E6A;
+	--secundario: #000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Quicksand', sans-serif;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 800px;
+	border-radius: 10px;
+	overflow: hidden;
+	/* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+	/* background: rgb(211, 194, 241); */
+	min-height: 60vh;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	margin-top: 200px;
+	border: solid 2px black;
+}
+
+.columna-izquierda {
+	justify-content: center;
+}
+/* 
+.columna-derecha {
+	background-color: violet;
+	/* background-size: cover; */
+	/* background-position-x: center;
+ */ 
+
+.header {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.header h1 {
+	color: var(--primario);
+}
+
+.header p {
+	color: var(--secundario);
+}
+
+label {
+	margin-bottom: 10px;
+	display: block;
+	font-weight: 500;
+	color: var(--secundario);
+	font-size: 14px;
+}
+
+.contenedor-input {
+	position: relative;
+}
+
+.registro {
+	display: none;
+}
+
+.registro.activo {
+	display: block;
+}
+
+.exito {
+	display: none;
+	height: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.exito.activo {
+	display: flex;
+}
+
+.exito svg {
+	width: 50px;
+	height: 50px;
+	color: var(--primario);
+}
+
+
+input {
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	width: 100%;
+	border-color: var(--primario);
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 0 20px 0 45px;
+	margin-bottom: 20px;
+	background: #f4f8f7;
+	font-family: 'Quicksand', sans-serif;
+	/* border: 2px solid transparent;
+	transition: .3s ease all; */
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--primario);
+}
+
+.contenedor-input svg {
+	position: absolute;
+	color: var(--primario);
+	top: 17px;
+	left: 17px;
+} 
+
+.contenedor-boton {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	border-radius: 5px;
+	margin-top: 20px;
+	background: none;
+	height: 50px;
+	color: var(--primario);
+	padding: 0 50px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	border: 2px solid var(--primario);
+	cursor: pointer;
+	transition: .3s ease all;
+	outline: none;
+}
+
+button:hover {
+	background: var(--primario);
+	color: #fff;
+}
+
+button svg {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+}
+
+
+/*Estilos de Validacion*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+	margin-bottom: 15px;
+} 
+
+.formulario__input-error-activo {
+	display: block;
+} 
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+
+body{
+	display: flex;
+	flex-direction: column;
+}
+
+.contenido{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+header{
+margin-bottom: 50px;
+margin-top: -20px;
+}
+
+.formulario__input2{
+	width: 713px;
+}
+
+#celular{
+	width: 100%;
+}
+
+.contenedor-input {
+	position: relative;
+  }
+  
+  .loading {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #ccc;
+	border-top-color: #333;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .hidden {
+	display: none;
+  }
+  

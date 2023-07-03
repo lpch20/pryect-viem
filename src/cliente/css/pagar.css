@@ -1,0 +1,55 @@
+#mercadoPago{
+    background-image: url("/dist/img/logo-mercadopago.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+td{
+    padding: 20px;
+    padding-top: 10px;
+    text-align: start;
+}
+
+th{
+padding: 18px;
+}
+
+#resumen_pago{
+    border: 2px solid;
+    border-radius: 10px;
+}
+#resumen_pago h2{
+    padding-top: 20px;
+}
+
+table{
+    margin-top: -30px;
+}
+
+.metodosPagos{
+    margin-left: 80px;
+}
+.metodosPagos h2{
+    text-align: center;
+}
+
+#btnDescargar {
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    line-height: 0px;
+}
+
+input{
+    width: 100px;
+    text-align: start;
+    border: none;
+}
+
+

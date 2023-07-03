@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="e">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/static/vendor/animate/animate.css"> -->
+    <!-- <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/maicons.css">
+    <link rel="stylesheet" href="/static/css/theme.css"> -->
+    <link href="http://fonts.cdnfonts.com/css/leelawadee" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <!-- <link rel="stylesheet" href="/static/css/simulador.css"> -->
+    <!-- <link rel="stylesheet" href="/assets/css/simulador2.css"> -->
+    <title>Simulador</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header1" class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img id="logo"
+                        src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png" alt="Logo Viemventura"></span></a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#contacto" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#color1" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#containSix" class="nav-link">¿Cómo pagar?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="resumen_pago">
+            <h2>Resumen de Acuerdo</h2>
+            <hr>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Cantidad de cuotas</td>
+
+                        <td><input disabled id="cantidadCuota" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Valor de la cuota</td>
+
+                        <td><input disabled id="valorCuota" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Monto de entrega</td>
+
+                        <td><input disabled id="montoEntrega" type="text"></td>
+                    </tr>
+                    <!-- Agrega más filas para cada producto -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="metodosPagos">
+            <h2>Metodos de pagos</h2>
+            <button id="mercadoPago"></button>
+        </div>
+
+    </main>
+
+    <footer id="foot" class="page-footer">
+        <div class="container">
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-3 py-3">
+                    <img id="logo2" src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png" alt="Logo Viemventura">
+                    <div class="divider mx-auto"></div>
+                    <p id="copyright">&copy; 2022 <a href=>Viemventura</a></p>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5>Links de interes</h5>
+                    <ul class="footer-menu">
+                        <li><a href="https://www.requiro.com.uy/" target="_blank">Requiro</a></li>
+                        <li><a href="https://www.creditosdirectos.com.uy/" target="_blank">Creditos Directos</a>
+                        </li>
+                        <li><a href="https://www.creditodelacasa.com.uy/" target="_blank">Crédito de la Casa</a>
+                        </li>
+                        <li><a href="https://www.creditel.com.uy/" target="_blank">Creditel</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5>Acerca de</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#color1">Nosotros</a></li>
+                        <li><a href="">Testimonios</a></li>
+                        <li><a href="#containSix">¡Quiero pagar!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/static/ext/bootstrap.bundle.min.js"></script>
+    <script src="/static/ext/pagars.js"></script>
+    <script src="/static/ext/simuladors.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+    <script src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="html2pdf.bundle.min.js"></script>
+</body>
+
+</html>

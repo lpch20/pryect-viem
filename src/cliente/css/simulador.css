@@ -1,0 +1,70 @@
+main {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    align-items: center;
+    height: 500px;
+    justify-content: center;
+}
+
+main div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+    padding-bottom: 40px;
+
+}
+
+main div {
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 250px;
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#cdc {
+    background-image: url("/dist/img/__FULL_ROJO.png");
+    background-size: cover;
+}
+
+#creditel {
+    background-image: url("/dist/img/creditel.jpg");
+    background-size: cover;
+    background-position: 5%;
+}
+
+.opacar {
+    display: none;
+}
+
+header {
+    margin-bottom: 250px;
+
+}
+
+footer {
+    margin-top: 150px;
+}
+
+/* footer{
+    margin-top: 50px;
+} */
