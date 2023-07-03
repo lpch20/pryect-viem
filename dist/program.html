@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./../vendor/animate/animate.css">
+    <link rel="stylesheet" href="./../css/bootstrap.css">
+    <link rel="stylesheet" href="./../css/maicons.css">
+    <link rel="stylesheet" href="./../css/theme.css"> -->
+    <link href="http://fonts.cdnfonts.com/css/leelawadee" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./../css/estilos.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+
+
+    <title>Ingresar</title>
+<script defer src="program.bundle.js"></script></head>
+
+<body>
+    <div class="container-fluid">
+
+        <header>
+            <nav id="header1" class="navbar navbar-expand-lg navbar-light navbar-float">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand"><img id="logo"
+                            src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png"
+                            alt="Logo Viemventura"></span></a>
+
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbarContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a href="#contacto" class="nav-link">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#color1" class="nav-link">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#containSix" class="nav-link">¿Cómo pagar?</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="contenido">
+            <!-- <div id="firstContain" class="page-banner home-banner">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-lg-6 py-3 wow fadeInUp">
+                            <h1 class="mb-4">¡Tu puerta abierta al mundo crediticio!</h1>
+                            <p class="text-lg mb-5">Estamos <span>re-evolucionando</span> la forma de limpiar tu deuda
+                            </p>
+
+                            <a href="#color1" class="btn btn-primary btn-split ml-2">Saber mas<div class="fab"></div>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 py-3 wow zoomIn">
+                            <div id="portada">
+                                <img id="imagenPortada" src="./assets/img/wepik-photo-mode-2022729-1302 (1).png"
+                                    alt="Foto portada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="contenedor">
+                <div class="columna-izquierda">
+                    <div class="registro activo" id="registro">
+
+
+                        <div class="header">
+                            <h1>Ingrese con su cedula para ver la deuda</h1>
+                        </div>
+
+                        <form class="formulario-ci" id="formulario-ci">
+
+
+                            <label class="formulario__input" for="nombre">Cedula</label>
+                            <div class="contenedor-input" id="grupo__cedula">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path class="formulario__validacion-estado fas fa-times-circle"
+                                        d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                                    <path
+                                        d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+                                </svg>
+                                <input class="formulario__input formulario__grupo-incorrecto" type="text" id="cedula"
+                                    name="cedula" placeholder="Cedula de Identidad">
+                                <p class="formulario__input-error">El nombre solo puede contener letras</p>
+                            </div>
+
+                            <label class="formulario__input" for="nombre">Nombre y Apellido</label>
+
+                            <div class="contenedor-input" id="grupo__nombre">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path class="formulario__validacion-estado fas fa-times-circle"
+                                        d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                <div class="input-container">
+                                    <input class="formulario__input formulario__grupo-incorrecto" type="text"
+                                        id="nombre" name="nombre" placeholder="Nombre y Apellido">
+                                    <div id="nombre-loading" class="loading hidden"></div>
+                                </div>
+                                <p class="formulario__input-error">El nombre solo puede contener letras</p>
+                            </div>
+
+
+                            <label class="formulario__input" for="nombre">Fecha de Nacimiento</label>
+                            <div class="contenedor-input" id="grupo__cedula">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path class="formulario__validacion-estado fas fa-times-circle"
+                                        d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                                    <path
+                                        d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+                                </svg>
+                                <input class="formulario__input " type="date" id="fechaNacimiento"
+                                    name="fechaNacimiento" placeholder="Fecha de Nacimiento">
+                                <p class="formulario__input-error">El nombre solo puede contener letras</p>
+                            </div>
+
+                            <label class="formulario__input" for="celular">Celular</label>
+                            <div class="contenedor-input" id="grupo__cedula">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path class="formulario__validacion-estado fas fa-times-circle"
+                                        d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                                    <path
+                                        d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+                                </svg>
+                                <input class="formulario__input2 formulario__grupo-incorrecto" type="tel" id="celular"
+                                    name="celular" placeholder="Celular">
+                                <p class="formulario__input-error">El nombre solo puede contener letras</p>
+                            </div>
+
+                            <label class="formulario__input formulario__grupo-incorrecto" for="token">Token</label>
+                            <div class="contenedor-input" id="grupo__contrasena">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path class="formulario__validacion-estado fas fa-times-circle"
+                                        d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                <input class="formulario__input " type="text" id="token" name="token"
+                                    placeholder="******">
+                                <p class="formulario__input-error">El nombre solo puede contener letras</p>
+                            </div>
+
+
+
+                            <div class="contenedor-boton">
+                                <button id="btn2" type="button">
+                                    Enviar token por sms
+                                </button>
+                            </div>
+
+                            <div class="contenedor-boton">
+                                <button id="btn1" type="button">
+                                    Ver deuda
+                                </button>
+                            </div>
+
+
+                        </form>
+
+                        <div class="formulario__mensaje" id="formulario__mensaje">
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                                correctamente. </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer id="foot" class="page-footer">
+            <div class="container">
+                <div class="row justify-content-center mb-2">
+                    <div class="col-lg-3 py-3">
+                        <img id="logo2" src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png"
+                            alt="Logo Viemventura">
+                        <div class="divider mx-auto"></div>
+                        <p id="copyright">&copy; 2022 <a href=>Viemventura</a></p>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <h5>Links de interes</h5>
+                        <ul class="footer-menu">
+                            <li><a href="https://www.requiro.com.uy/" target="_blank">Requiro</a></li>
+                            <li><a href="https://www.creditosdirectos.com.uy/" target="_blank">Creditos Directos</a>
+                            </li>
+                            <li><a href="https://www.creditodelacasa.com.uy/" target="_blank">Crédito de la Casa</a>
+                            </li>
+                            <li><a href="https://www.creditel.com.uy/" target="_blank">Creditel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 py-3">
+                        <h5>Acerca de</h5>
+                        <ul class="footer-menu">
+                            <li><a href="#contacto">Contacto</a></li>
+                            <li><a href="#color1">Nosotros</a></li>
+                            <li><a href="">Testimonios</a></li>
+                            <li><a href="#containSix">¡Quiero pagar!</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+    <script src="/static/ext/programs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+    <script src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+</body>
+
+</html>
