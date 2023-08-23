@@ -6,11 +6,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/cliente/js/index.js',
-    program: './src/cliente/js/program.js', // Agrega la entrada para program.js
-    simulador: './src/cliente/js/simulador.js', // Agrega la entrada para program.js
-    simulaDeuda: './src/cliente/js/simulaDeuda.js', // Agrega la entrada para program.js
-    pagar: './src/cliente/js/pagar.js', // Agrega la entrada para program.js
-    convenio: './src/cliente/js/convenio.js' // Agrega la entrada para program.js
+    program: './src/cliente/js/program.js', 
+    simulaDeuda: './src/cliente/js/simulaDeuda.js', 
+    pagar: './src/cliente/js/pagar.js', 
+    convenio: './src/cliente/js/convenio.js',
+    simulaDeuda2: './src/cliente/js/simulaDeuda2.js',
+    pagoContado: './src/cliente/js/pagoContado.js',
+    abitab: './src/cliente/js/abitabRedpagos.js',
+    redpagos: './src/cliente/js/abitabRedpagos.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -27,33 +30,48 @@ module.exports = {
   plugins: [
     new htmlWebpackPlugin({
       template: './src/cliente/index.html',
-      chunks: ['index'], // Incluye solo el chunk index en index.html
+      chunks: ['index'], 
       filename: 'index.html'
     }),
     new htmlWebpackPlugin({
       template: './src/cliente/program.html',
-      chunks: ['program'], // Incluye solo el chunk program en program.html
+      chunks: ['program'], 
       filename: 'program.html'
     }),
     new htmlWebpackPlugin({
-      template: './src/cliente/simulador.html',
-      chunks: ['simulador'], // Incluye solo el chunk program en simulador.html
-      filename: 'simulador.html'
-    }),
-    new htmlWebpackPlugin({
       template: './src/cliente/simulaDeuda.html',
-      chunks: ['simulaDeuda'], // Incluye solo el chunk program en simulaDeuda.html
+      chunks: ['simulaDeuda'], 
       filename: 'simulaDeuda.html'
     }),
     new htmlWebpackPlugin({
+      template: './src/cliente/simulaDeuda2.html',
+      chunks: ['simulaDeuda2'], 
+      filename: 'simulaDeuda2.html'
+    }),
+    new htmlWebpackPlugin({
       template: './src/cliente/pagar.html',
-      chunks: ['pagar'], // Incluye solo el chunk program en simulaDeuda.html
+      chunks: ['pagar'], 
       filename: 'pagar.html'
     }),
     new htmlWebpackPlugin({
       template: './src/cliente/convenio.html',
-      chunks: ['convenio'], // Incluye solo el chunk program en simulaDeuda.html
+      chunks: ['convenio'], 
       filename: 'convenio.html'
+    }),
+    new htmlWebpackPlugin({
+      template: './src/cliente/pagoContado.html',
+      chunks: ['pagoContado'], 
+      filename: 'pagoContado.html'
+    }),
+    new htmlWebpackPlugin({
+      template: './src/cliente/abitab.html',
+      chunks: ['abitab'], 
+      filename: 'abitab.html'
+    }),
+    new htmlWebpackPlugin({
+      template: './src/cliente/redpagos.html',
+      chunks: ['redpagos'], 
+      filename: 'redpagos.html'
     })
   ]
 };

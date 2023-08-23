@@ -63,13 +63,12 @@ section {
 
 body {
   /* margin: 0; */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Work Sans", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #F6F5FC;
 
 }
 
@@ -159,11 +158,12 @@ address {
 }
 
 #firstContain{
-  background-color: #F6F5FC;
+	background: url(/dist/img/5.svg) no-repeat center center fixed;
   display: flex;
+  flex-direction: column;
   height: 900px;
   margin-bottom: 0px;
-  margin-top: 200px;
+  margin-top: 100px;
   justify-content: center;
 }
 
@@ -217,6 +217,8 @@ address {
 
 footer{
   margin-bottom: 1px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 @media(max-width: 512px){
@@ -299,6 +301,7 @@ footer{
 }
 
 #imgCreditos {
+  margin-left: 0px;
   width: 300px;
   height: 200px;
 }
@@ -321,6 +324,16 @@ footer{
 #trabajamosCon{
   margin-top: 50px;
 }
+
+/* .row>*{
+  padding-right: 0px;
+  flex-shrink: 0px;
+    width: 0px;
+    max-width: 0px;
+    padding-right: 0px;
+    padding-left: 10px;
+    margin-top:0px;
+} */
 
 #buttonMasInfo {
   width: 200px;
@@ -388,7 +401,7 @@ footer{
 
 #color1{
   margin-top: 1px;
-  background-color: rgb(211, 194, 241);
+  background: url(/dist/img/5.svg) no-repeat center center fixed;
 }
 
 #portada img{
@@ -413,7 +426,7 @@ footer{
 }
 
 #containFive{
-  background-color: rgb(211, 194, 241);
+  background: url(/dist/img/5.svg) no-repeat center center fixed;
 }
 
 #containSix{
@@ -466,7 +479,7 @@ footer{
 }
 
 #contacto{
-  background-color: #F6F5FC;
+  background: url(/dist/img/5.svg) no-repeat center center fixed;
 }
 
 .home-testimonial{background-color: rgb(211, 194, 241) ;height: 380px;}.home-testimonial-bottom{background-color: #f8f8f8;transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top: 20px;margin-bottom: 0px;position: relative;height: 130px;top: 190px}.home-testimonial h3{color: var(--orange);font-size: 14px;font-weight: 500;text-transform: uppercase}.testimonial-inner{position: relative;top: -174px}.testimonial-pos{position: relative;top: 24px}.testimonial-inner .tour-desc{border-radius: 5px;padding: 40px}.color-grey-3{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.testimonial-inner img.tm-people{width: 60px;height: 60px;-webkit-border-radius: 50%;border-radius: 50%;-o-object-fit: cover;object-fit: cover;max-width: none}.link-name{font-family: "Montserrat", Sans-serif;font-size: 14px;color: #6c83a2}.link-position{font-family: "Montserrat", Sans-serif;font-size: 12px;color: #6c83a2}
@@ -2766,6 +2779,7 @@ pre code {
   #imgCreditos{
     width: 100%;
     margin: auto;
+    margin-left: 0px;
   }
 
   #imgCreditos4{
@@ -2775,7 +2789,6 @@ pre code {
   }
 
   #imgCreditos3{
-    width: 150px;
     width: 100%;
     margin: auto;
   }
@@ -2788,6 +2801,11 @@ pre code {
     background-color: transparent;
     border-style: none;
   }
+  #firstContain{
+    margin-top: 200px;
+
+  }
+  
 }
 
 .table-responsive {
@@ -3464,20 +3482,20 @@ fieldset:disabled a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #28a745;
+  background-color: #c75fc7;
   border-color: #28a745;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #218838;
+  background-color: #c75fc7;
   border-color: #1e7e34;
 }
 
 .btn-success:focus,
 .btn-success.focus {
   color: #fff;
-  background-color: #218838;
+  background-color: #c75fc7;
   border-color: #1e7e34;
   box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
@@ -4020,10 +4038,12 @@ fieldset:disabled a.btn {
 
 .btn-lg,
 .btn-group-lg>.btn {
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
+  width: 200px;
+  background-color: rgb(211, 194, 241);
 }
 
 .btn-sm,
@@ -5404,9 +5424,20 @@ input[type="button"].btn-block {
   }
 
   #imgCreditos3{
-    width: 200px;
-    margin-left: 50px;
-    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  #imgCreditos4{
+    width: 80%;
+    margin-left: 10%;
+  }
+  #imgCreditos{
+    width: 80%;
+    margin-left: 10%;
+  }
+  #trabajamosCon{
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -7201,7 +7232,7 @@ a.close.disabled {
 
 @media only screen and (max-width: 3500px) and (min-width: 993px)  {
   #palmeroTwo{
-    display: none;
+    display: flex;
   }
 }
 
@@ -11751,5 +11782,31 @@ a.text-dark:focus {
 
 }
 
+.carou{
+  height: 1000px;
+}
+
+#fondo2{
+  height: 1000px;
+  transform: scale(0.5);
+}
+
+#fondo1{
+  height: 1000px;
+  transform: scale(0.8);
+}
 
 /*# sourceMappingURL=bootstrap.css.map */
+
+.profile-card-2 {
+  max-width: 300px;
+  height: 200px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 10px;
+}

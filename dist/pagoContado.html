@@ -9,8 +9,9 @@
     <link href="http://fonts.cdnfonts.com/css/leelawadee" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    <title>Simulador</title>
-</head>
+
+    <title>Pagar</title>
+<script defer src="pagoContado.bundle.js"></script></head>
 
 <body>
     <header>
@@ -42,40 +43,68 @@
     </header>
 
     <main>
-        <div class="verificarp">
-            <h1>Verificar Pago de Deuda</h1>
-            <div class="debt-info">
-                <div class="payment-status">
-                    <h2>Estado de Pago</h2>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <h1 class="color-violet">¡Ya Casi!</h1>
+                <h2 id="peopleName" class="separador"></h2>
+
+                <div class="row my-4">
+                    <div class="col">
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <div class="timeline-content">
+                                    <div class="inner-circle"></div>
+                                    <p class="badge bagde-primary mt-2 mb-0">Paso 1</p>
+                                    <p class="mb-0">Seleccionar deuda</p>
+                                </div>
+                            </div>
+                            <div class="timeline-step active">
+                                <div class="timeline-content">
+                                    <div class="inner-circle"></div>
+                                    <p class="badge bagde-primary  mt-2 mb-0">Paso 2</p>
+                                    <p class="mb-0">Pagar</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <p>Cuotas pagas: <span id="paid-amount">10</span></p>
-                    <p>Cuotas restantes: <span id="remaining-amount">5</span></p>
                 </div>
-                <div class="payment-details">
-                    <h2>Detalles del Pago</h2>
-                    <p>Monto de cuotas mensuales: <span id="monthly-installments">17500</span></p>
-                    <p>Monto de deuda inicial: <span id="paid-installments">80.000</span></p>
-                    <p>Cuotas iniciales: <span id="monthly-payment">18</span></p>
+
+            </div>
+      
+        <section class="container">
+            <div class="row justify-content-center mx-0">
+                <div class="col-12 col-md-8 bg-gray p-4">
+                    <h3>Resumen detallado del acuerdo</h3>
+                    <div class="info-success mt-4 mb-5 card p-3">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Nombre:</p>
+                            <p id="nombre" class="mb-2"></p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Monto de deuda al contado: </p>
+                            <p id="deudaContado2" class="mb-2"></p>
+                        </div>
+                    </div>
+                    <p>Elegí el método de pago</p>
+                    <div class=" mb-5">
+                        <article class="bg-white p-3 d-flex align-items-center justify-content-between">
+                            <img src="/static/img/mercadoPago.svg" alt="Mercado Pago" width="100">
+                            <input class="input-absolute" type="checkbox" id="check-2" checked>
+                            <label class="label-absolute mb-0" for="check-2"></label>
+                        </article>
+                    </div>
+                    <div class="form-check text-center mb-2">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <small>Acepto términos y condiciones</small>
+                        </label>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100">Pagar</button>
                 </div>
             </div>
-        </div>
-    
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const paidAmount = document.getElementById("paid-amount").textContent;
-                const remainingAmount = document.getElementById("remaining-amount").textContent;
-    
-                const progressBar = document.querySelector(".progress");
-    
-                const totalAmount = parseInt(paidAmount) + parseInt(remainingAmount);
-                const progressPercentage = (parseInt(paidAmount) / totalAmount) * 100;
-    
-                progressBar.style.width = progressPercentage + "%";
-            });
-        </script>
+
+        </section>
+
     </main>
 
     <footer id="foot" class="page-footer">
@@ -110,13 +139,20 @@
         </div>
     </footer>
 
+
     <script src="/static/ext/bootstrap.bundle.min.js"></script>
-    <script src="/static/ext/convenios.js"></script>
+    <script src="/static/ext/deudaContado.js"></script>
+    <script src="/static/ext/simuladors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

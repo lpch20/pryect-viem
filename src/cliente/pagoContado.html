@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="e">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 
     <title>Pagar</title>
-<script defer src="pagar.bundle.js"></script></head>
+</head>
 
 <body>
     <header>
@@ -81,20 +81,8 @@
                             <p id="nombre" class="mb-2"></p>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <p class="mb-0">Monto de deuda financiado:</p>
-                            <p id="montoFinanciado" class="mb-2"></p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-0">Monto de entrega inicial: </p>
-                            <p id="entregaInicial" class="mb-2"></p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Cantidad de cuotas a pagar:</p>
-                            <p id="cantidadCuotas" class="mb-2"></p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="mb-2">Monto por cuota:</p>
-                            <p id="montoPorCuota" class="mb-2"></p>
+                            <p class="mb-2">Monto de deuda al contado: </p>
+                            <p id="deudaContado2" class="mb-2"></p>
                         </div>
                     </div>
                     <p>Elegí el método de pago</p>
@@ -104,6 +92,18 @@
                             <input class="input-absolute" type="checkbox" id="check-2" checked>
                             <label class="label-absolute mb-0" for="check-2"></label>
                         </article>
+                        <br>
+                        <article class="bg-white p-3 d-flex align-items-center justify-content-between">
+                            <img src="/static/img/Logo-Redpagos-768x154_old.jpg" alt="Mercado Pago" width="100">
+                            <input class="input-absolute" type="checkbox" id="check-3" >
+                            <label class="label-absolute mb-0" for="check-3"></label>
+                        </article>
+                        <br>
+                        <article class="bg-white p-3 d-flex align-items-center justify-content-between">
+                            <img id="imgLogoAbitab" src="/static/img/Abitab_S.ALogo.png" alt="Mercado Pago" width="100">
+                            <input class="input-absolute" type="checkbox" id="check-4" >
+                            <label class="label-absolute mb-0" for="check-4"></label>
+                        </article>
                     </div>
                     <div class="form-check text-center mb-2">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -111,12 +111,12 @@
                             <small>Acepto términos y condiciones</small>
                         </label>
                     </div>
-                    <button id="pagarFinanciado" type="button" class="btn btn-primary w-100">Pagar</button>
+                    <button id="pagarContado" type="button" class="btn btn-primary w-100">Pagar</button>
                 </div>
             </div>
-
+            
         </section>
-
+        <div id="wallet_container"></div>
     </main>
 
     <footer id="foot" class="page-footer">
@@ -151,9 +151,9 @@
         </div>
     </footer>
 
-
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
     <script src="/static/ext/bootstrap.bundle.min.js"></script>
-    <script src="/static/ext/pagars.js"></script>
+    <script src="/static/ext/deudaContado.js"></script>
     <script src="/static/ext/simuladors.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
@@ -165,7 +165,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </body>
 
 </html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link href="http://fonts.cdnfonts.com/css/leelawadee" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Simulador</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header1" class="navbar navbar-expand-lg navbar-light navbar-float">
+            <div class="container">
+                <a href="index.html" class="navbar-brand"><img id="logo"
+                        src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png" alt="Logo Viemventura"></span></a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#contacto" class="nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#color1" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#containSix" class="nav-link">¿Cómo pagar?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center">
+                    <h1 class="color-violet">¡Hola!</h1>
+                    <h2 id="peopleName" class="separador">Carlos Perez,</h2>
+                    <p>A continuación, te pido que sigas los pasos para lograr un pago exitoso.</p>
+
+                    <div class="row my-4">
+                        <div class="col">
+                            <div class="timeline-steps">
+                                <div class="timeline-step active">
+                                    <div class="timeline-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="badge bagde-primary mt-2 mb-0">Paso 1</p>
+                                        <p class="mb-0">Seleccionar deuda</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="timeline-content">
+                                        <div class="inner-circle"></div>
+                                        <p class="badge bagde-primary  mt-2 mb-0">Paso 2</p>
+                                        <p class="mb-0">Pagar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-8 itemsSelect">
+                    <h4 class="my-4 d-flex"><span class="pasos mr-2">Paso 1</span> Seleccioná una o todas las deudas que
+                        podés cancelar</h4>
+                    <div class="wrap">
+                        <article id="cdc1"
+                            class="bg-light position-relative p-3 d-flex align-items-center justify-content-between">
+                            <img src="/static/img/creditoDeLaCasa.svg" alt="Credito de la casa" width="100">
+                            <input class="input-absolute" type="checkbox" id="check" checked>
+                            <label class="label-absolute mb-0" for="check"></label>
+                        </article>
+                        <article id="creditel1"
+                            class="bg-light position-relative p-3 d-flex align-items-center justify-content-between">
+                            <img src="/static/img/creditel.svg" alt="Creditel" width="100">
+                            <input class="input-absolute" type="checkbox" id="check-2" checked>
+                            <label class="label-absolute mb-0" for="check-2"></label>
+                        </article>
+                    </div>
+
+                    <div id="resumenCreditel" class="info-success mt-4 card p-3">
+                        <h4 class="mb-4">Resumen</h4>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Total del monto adeudado: </p>
+                            <p id="totalCreditel" class="mb-0"></p>
+                        </div>
+                    </div>
+                    <div id="resumenCdc" class="info-success mt-4 card p-3">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Total del monto adeudado: </p>
+                            <p id="totalCdc" class="mb-0">$45000</p>
+                        </div>
+                    </div>
+                    <div id="resumenCdcYCreditel" class="info-success mt-4 card p-3">
+                        <h4 class="mb-4">Resumen</h4>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Credito de la casa: </p>
+                            <p id="cdcEnTotal" class="mb-2">$20000</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Crediel: </p>
+                            <p id="creditelEnTotal" class="mb-2">$25000</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0">Total del monto adeudado: </p>
+                            <p id="totalTotal" class="mb-0">$45000</p>
+                        </div>
+
+                    </div>
+
+                    <h4 class="mt-5 mb-4 d-flex"><span class="pasos mr-2">Paso 2</span> Seleccioná la forma de pago</h4>
+
+
+
+                    <div id="mostrarCreditel" class="content bg-gray p-4 mt-4">
+                        <div class="content-pay">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-start align-items-start align-items-md-center gap-2 mb-3 mb-md-5">
+                                <h4 class="mb-2 mb-md-0">
+                                    Cancelación al contado
+                                </h4>
+                                <span class="text-modal color-text d-flex align-items-center cursor-pointer ml-md-4"
+                                    data-toggle="modal" data-target="#masInfoCreditel">
+                                    Más info
+                                </span>
+                                <img src="/static/img/arrow.svg" height="25" class="arrow">
+                                <div class="modal fade" id="masInfoCreditel" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Al pagar contado, disfrutas de beneficios financieros únicos que te
+                                                ayudarán a aligerar tu carga económica. Al utilizar esta opción de pago,
+                                                podrás reducir tu deuda de manera efectiva y rápida, sin tener que
+                                                preocuparte por intereses acumulados o plazos de pago prolongados.
+                                                Además, al elegir la opción de pago contado, estarás protegiéndote de
+                                                posibles aumentos futuros en las tasas de interés o ajustes en los
+                                                términos de pago. Esto te brinda una tranquilidad adicional al saber que
+                                                tu deuda estará resuelta sin sorpresas inesperadas en el futuro.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box wrap">
+                                <div class="p-3 bg-white rounded">
+                                    <p class="mb-0">Actual</p>
+                                    <p id="contadoCreditel" class="price mb-0">$ <big class="bigElement"></big></p>
+                                </div>
+                                <div class="p-3 bg-blue text-light rounded">
+                                    <p class="mb-0">Al contado</p>
+                                    <div class="d-flex align-items-center mb-0">
+                                        <p id="deudaCreditel" class="price mb-0">$ <big class="bigElement"></big></p>
+                                        <span id="descuento" class="discount ml-3 bg-white color-blue py-1 px-2">-
+                                            $32.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5 mb-3">
+                                <button id="pagoContadoCreditel" type="button" class="btn btn-primary w-100">Quiero este
+                                    ahorro</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mostrarCdc" class="content bg-gray p-4 mt-4">
+                        <div class="content-pay">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-start align-items-start align-items-md-center gap-2 mb-3 mb-md-5">
+                                <h4 class="mb-2 mb-md-0">
+                                    Cancelación al contado
+                                </h4>
+                                <span class="text-modal color-text d-flex align-items-center cursor-pointer ml-md-4"
+                                    data-toggle="modal" data-target="#masInfoCdc">
+                                    Más info
+                                </span>
+                                <img src="/static/img/arrow.svg" height="25" class="arrow">
+                                <div class="modal fade" id="masInfoCdc" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Al pagar contado, disfrutas de beneficios financieros únicos que te
+                                                ayudarán a aligerar tu carga económica. Al utilizar esta opción de pago,
+                                                podrás reducir tu deuda de manera efectiva y rápida, sin tener que
+                                                preocuparte por intereses acumulados o plazos de pago prolongados.
+                                                Además, al elegir la opción de pago contado, estarás protegiéndote de
+                                                posibles aumentos futuros en las tasas de interés o ajustes en los
+                                                términos de pago. Esto te brinda una tranquilidad adicional al saber que
+                                                tu deuda estará resuelta sin sorpresas inesperadas en el futuro.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box wrap">
+                                <div class="p-3 bg-white rounded">
+                                    <p class="mb-0">Actual</p>
+                                    <p id="contadoCdc" class="price mb-0">$<big class="bigElement"></big></p>
+                                </div>
+                                <div class="p-3 bg-blue text-light rounded">
+                                    <p class="mb-0">Al contado</p>
+                                    <div class="d-flex align-items-center mb-0">
+                                        <p id="deudaCdc" class="price mb-0">$ <big class="bigElement"></big></p>
+                                        <span id="descuentoCdc" class="discount ml-3 bg-white color-blue py-1 px-2">-
+                                            $32.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5 mb-3">
+                                <button id="pagoContadoCdc" type="button" class="btn btn-primary w-100">Quiero este
+                                    ahorro</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cdcMasCreditel" class="content bg-gray p-4 mt-4">
+                        <div class="content-pay">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-start align-items-start align-items-md-center gap-2 mb-3 mb-md-5">
+                                <h4 class="mb-2 mb-md-0">
+                                    Cancelación al contado
+                                </h4>
+                                <span class="text-modal color-text d-flex align-items-center cursor-pointer ml-md-4"
+                                    data-toggle="modal" data-target="#masInfoCdcMasCreditel">
+                                    Más info
+                                </span>
+                                <img src="/static/img/arrow.svg" height="25" class="arrow">
+                                <div class="modal fade" id="masInfoCdcMasCreditel" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Al pagar contado, disfrutas de beneficios financieros únicos que te
+                                                ayudarán a aligerar tu carga económica. Al utilizar esta opción de pago,
+                                                podrás reducir tu deuda de manera efectiva y rápida, sin tener que
+                                                preocuparte por intereses acumulados o plazos de pago prolongados.
+                                                Además, al elegir la opción de pago contado, estarás protegiéndote de
+                                                posibles aumentos futuros en las tasas de interés o ajustes en los
+                                                términos de pago. Esto te brinda una tranquilidad adicional al saber que
+                                                tu deuda estará resuelta sin sorpresas inesperadas en el futuro.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box wrap">
+                                <div class="p-3 bg-white rounded">
+                                    <p class="mb-0">Actual</p>
+                                    <p id="contadoCdcMasCreditel" class="price mb-0">$ <big class="bigElement"></big>
+                                    </p>
+                                </div>
+                                <div class="p-3 bg-blue text-light rounded">
+                                    <p class="mb-0">Al contado</p>
+                                    <div class="d-flex align-items-center mb-0">
+                                        <p id="deudaCdcMasCreditel" class="price mb-0">$ <big class="bigElement"></big>
+                                        </p>
+                                        <span id="descuentoCdcMasCreditel"
+                                            class="discount ml-3 bg-white color-blue py-1 px-2">- $32.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5 mb-3">
+                                <button id="pagoContadoAmbos" type="button" class="btn btn-primary w-100">Quiero este
+                                    método</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content bg-gray p-4 mt-4">
+                        <div class="content-pay">
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-start align-items-start align-items-md-center gap-2 mb-3 mb-md-5">
+                                <h4 class="mb-2 mb-md-0">
+                                    Pago inicial y financiar el resto
+                                </h4>
+                                <span class="text-modal color-text d-flex align-items-center cursor-pointer ml-md-4"
+                                    data-toggle="modal" data-target="#masInfo2">
+                                    Más info
+                                </span>
+                                <img src="/static/img/arrow.svg" height="25" class="arrow">
+                                <div class="modal fade" id="masInfo2" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Información</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Al optar por el monto financiado con entrega inicial, tendrás la
+                                                posibilidad de realizar una entrega inicial que supere el 15% de la
+                                                deuda total. Esta entrega inicial te permitirá reducir el monto a
+                                                financiar, lo que resulta en un impacto positivo en las tasas de
+                                                interes. A partir de la cuota 7, pasara de un 50% original a solo un
+                                                30%, lo que significa que pagarás menos intereses en el saldo
+                                                restante.Es importante destacar que las primeras 6 cuotas estarán libres
+                                                de intereses, lo que te da un período inicial sin costos adicionales
+                                                para que puedas adaptarte a tus pagos de manera más sencilla y sin
+                                                preocupaciones. Esto te brinda la oportunidad de organizar mejor tus
+                                                finanzas y planificar el resto de tus cuotas con mayor
+                                                tranquilidad.Además, al elegir esta opción de pago, podrás dividir el
+                                                monto restante después de la entrega inicial en hasta 18 cuotas. De esta
+                                                manera, tendrás la flexibilidad de establecer un plan de pagos que se
+                                                ajuste a tus necesidades y capacidad financiera, facilitando el manejo
+                                                de tus obligaciones.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Monto inicial</p>
+                                <p id="montoInicial" class="mb-2">$</p>
+                            </div>
+
+                            <div class="slider-container mb-5">
+                                <input type="range" id="amountSlider" min="" max="" value="0" step="">
+                                <div id="rangebar" class="range-bar"></div>
+                                <span id="amountValue" class="tooltip-custom"></span>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-2">Cantidad de cuotas</p>
+                                <p id="cantidaddeCuotas" class="mb-2">6</p>
+                            </div>
+
+                            <div class="slider-container">
+                                <input type="range" id="installmentsSlider" min="2" max="18" value="" step="">
+                                <div class="range-bar"></div>
+                                <span id="installmentsValue" class="tooltip-custom"></span>
+                            </div>
+
+
+                            <div class="info-success mt-4 card p-3 margin-top-custom">
+                                <h4 class="mb-3">Resumen</h4>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Monto a depositar: </p>
+                                    <p id="amount2" class="mb-2"></p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Monto restaste a finanaciar: </p>
+                                    <p id="restanteFinanciar" class="mb-2"></p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="mb-2">Monto a pagar por cuota: </p>
+                                    <p id="montoCuota" class="mb-2"></p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center mt-5 mb-3">
+                                <button id="pagoFinanciado" type="button" class="btn btn-primary w-100">Quiero este
+                                    método</button>
+                            </div>
+                        </div>
+                    </div>
+
+        </section>
+    </main>
+
+    <footer id="foot" class="page-footer">
+        <div class="container">
+            <div class="row justify-content-center mb-2">
+                <div class="col-lg-3 py-3">
+                    <img id="logo2" src="/static/img/LOGO_VV_REQUIRO_min-removebg-preview.png" alt="Logo Viemventura">
+                    <div class="divider mx-auto"></div>
+                    <p id="copyright">&copy; 2022 <a href=>Viemventura</a></p>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5>Links de interes</h5>
+                    <ul class="footer-menu">
+                        <li><a href="https://www.requiro.com.uy/" target="_blank">Requiro</a></li>
+                        <li><a href="https://www.creditosdirectos.com.uy/" target="_blank">Creditos Directos</a>
+                        </li>
+                        <li><a href="https://www.creditodelacasa.com.uy/" target="_blank">Crédito de la Casa</a>
+                        </li>
+                        <li><a href="https://www.creditel.com.uy/" target="_blank">Creditel</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 py-3">
+                    <h5>Acerca de</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#color1">Nosotros</a></li>
+                        <li><a href="">Testimonios</a></li>
+                        <li><a href="#containSix">¡Quiero pagar!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/ext/simulaDeuda.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

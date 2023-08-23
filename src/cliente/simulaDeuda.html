@@ -6,15 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="/static/vendor/animate/animate.css"> -->
-    <!-- <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/maicons.css">
-    <link rel="stylesheet" href="/static/css/theme.css"> -->
     <link href="http://fonts.cdnfonts.com/css/leelawadee" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-    <!-- <link rel="stylesheet" href="/static/css/simulador.css"> -->
-    <!-- <link rel="stylesheet" href="/assets/css/simulador2.css"> -->
     <title>Simulador</title>
 </head>
 
@@ -305,10 +299,100 @@
                 </div>
             </article>
             <div class="simuladorCuotas">
-                <h1>Simulador de pagos por <input id="financiera" class="classdeudas" disabled type="text"></h1>
+                <h1>Seleccione a continuacion la opcion disponible</h1>
+                <div id="option">
+                    <section class="financiaras">
+                        <div id="cdc1">
+                            <button id="cdc"></button>
+                            <div  class="cdc1">
+                                <div>
+                                    <label for="interest">Monto de deuda</label>
+                                    <div class="wave-group highlighted-number">
+                                        <input required="" type="text" class="input" disabled id="contadoCdc">
+                                        <span class="bar"></span>
+                                        <label class="label">
+                                            <span class="label-char" style="--index: 0"></span>
+                                            <span class="label-char" style="--index: 1"></span>
+                                            <span class="label-char" style="--index: 2"></span>
+                                            <span class="label-char" style="--index: 3"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="amount">Cancelacion Contado</label>
+                                    <div class="wave-group highlighted-number">
+                                        <input required="" type="text" class="input" disabled id="deudaCdc">
+                                        <span class="bar"></span>
+                                        <label class="label">
+                                            <span class="label-char" style="--index: 0"></span>
+                                            <span class="label-char" style="--index: 1"></span>
+                                            <span class="label-char" style="--index: 2"></span>
+                                            <span class="label-char" style="--index: 3"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-wrapper-33">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox__trigger visuallyhidden">
+                                        <span class="checkbox__symbol">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 28 28"
+                                                height="28px" width="28px" class="icon-checkbox" aria-hidden="true">
+                                                <path d="M4 14l8 7L24 7"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="creditel1">
+                            <button id="creditel"></button>
+                            <div  class="creditel1">
+                                <div>
+                                    <label for="interest">Monto de deuda</label>
+                                    <div class="wave-group highlighted-number">
+                                        <input required="" type="text" class="input" disabled id="contadoCreditel">
+                                        <span class="bar"></span>
+                                        <label class="label">
+                                            <span class="label-char" style="--index: 0"></span>
+                                            <span class="label-char" style="--index: 1"></span>
+                                            <span class="label-char" style="--index: 2"></span>
+                                            <span class="label-char" style="--index: 3"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="amount">Cancelacion Contado</label>
+                                    <div class="wave-group highlighted-number">
+                                        <input required="" type="text" class="input" disabled id="deudaCreditel">
+                                        <span class="bar"></span>
+                                        <label class="label">
+                                            <span class="label-char" style="--index: 0"></span>
+                                            <span class="label-char" style="--index: 1"></span>
+                                            <span class="label-char" style="--index: 2"></span>
+                                            <span class="label-char" style="--index: 3"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="checkbox-wrapper-33">
+                                    <label class="checkbox">
+                                        <input type="checkbox" class="checkbox__trigger visuallyhidden">
+                                        <span class="checkbox__symbol">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 28 28"
+                                                height="28px" width="28px" class="icon-checkbox" aria-hidden="true">
+                                                <path d="M4 14l8 7L24 7"></path>
+                                            </svg>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
 
                 <div class="montos">
-                    <div class="montos2">
+                    <!-- <div class="montos2">
                         <div id="firstChild">
                             <label for="amount">Monto de deuda</label>
                             <div class="highlighted-number"><input class="classdeudas" disabled id="deuda" type="text">
@@ -321,12 +405,12 @@
                                     type="text">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="cuotaEntrega">
                         <div id="fourthChild">
                             <label for="Entrega">Entrega Inicial</label>
-                            <div><input id="amount2" type="text" style="width: 250px;"></div>
+                            <div><input id="amount2" type="number  " style="width: 250px;"></div>
                         </div>
 
                         <div id="thirdChild">
@@ -370,7 +454,7 @@
                 </div>
                 <div class="cuoPagar">
                     <label for="">Monto a pagar por cuotas:</label>
-                    <input id="cuotaPagar" disabled type="text">
+                    <p id="cuotaPagar"></p>
                 </div>
             </div>
 
@@ -390,9 +474,10 @@
                 <button id="calcular" class="buttons">Calcular</button>
                 <button id="buttonPagar" class="segundo-boton">Pagar</button>
             </div>
-            <a class="chat-button2" href="javascript:void(0)" onclick="showTerms()">Al presionar pagar aceptas nuestros términos y
+            <a class="chat-button2" href="javascript:void(0)" onclick="showTerms()">Al presionar pagar aceptas nuestros
+                términos y
                 condiciones. <br>Leer Terminos y Condiciones. </a>
-           
+
 
         </div>
 
@@ -489,7 +574,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="bundle.js"></script>
 </body>
 
 </html>

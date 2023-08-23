@@ -23,8 +23,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
 
 body {
-  font-family: "Work Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1.1;
   color: #2D2B3A;
 }
 
@@ -2178,7 +2177,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 
-/* Custom Plugin */
+Custom Plugin
 .owl-nav {
   display: block;
   margin: 15px auto;

@@ -48,13 +48,40 @@
     </header>
 
     <main>
-        <div id="option">
-            <h1>Usted mantiene un convenio con</h1>
-            <section>
-                <button id="cdc"></button>
-                <button id="creditel"></button>
-            </section>
+        <div class="verificarp">
+            <h1>Verificar Pago de Deuda</h1>
+            <div class="debt-info">
+                <div class="payment-status">
+                    <h2>Estado de Pago</h2>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <br>
+                    <p>Cuotas pagas: <span id="paid-amount">10</span></p>
+                    <p>Cuotas restantes: <span id="remaining-amount">5</span></p>
+                </div>
+                <div class="payment-details">
+                    <h2>Detalles del Pago</h2>
+                    <p>Monto de cuotas mensuales: <span id="monthly-installments">17500</span></p>
+                    <p>Monto de deuda inicial: <span id="paid-installments">80.000</span></p>
+                    <p>Cuotas iniciales: <span id="monthly-payment">18</span></p>
+                </div>
+            </div>
         </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const paidAmount = document.getElementById("paid-amount").textContent;
+                const remainingAmount = document.getElementById("remaining-amount").textContent;
+    
+                const progressBar = document.querySelector(".progress");
+    
+                const totalAmount = parseInt(paidAmount) + parseInt(remainingAmount);
+                const progressPercentage = (parseInt(paidAmount) / totalAmount) * 100;
+    
+                progressBar.style.width = progressPercentage + "%";
+            });
+        </script>
     </main>
 
     <footer id="foot" class="page-footer">
